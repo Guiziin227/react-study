@@ -1,0 +1,112 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Container styling */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Product list styling */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.products:hover {
+  background-color: #e0e0e0;
+}
+
+/* Product details styling */
+.products p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.products p:nth-child(1) {
+  font-weight: bold;
+}
+
+.products p:nth-child(3) {
+  color: #e67e22;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e67e22;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: #d1721e;
+}
+
+.btn:active {
+  background-color: #c46919;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+form label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Input styling */
+form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4caf50;
+}
