@@ -79,23 +79,28 @@ export default function App() {
         setWatched(watched => watched.filter(movie => movie.imdbID !== id))
     }
 
+
     useEffect(() => {
+        const controller = new AbortController()
 
         async function fetchMovies() {
             try {
                 setIsLoading(true)
                 setError('')
-                const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`)
+                const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`, {signal: controller.signal})
 
                 if (!res.ok) throw new Error("Vish deu erro na busca")
 
                 const data = await res.json()
                 if (data.Response === "False") throw new Error("Filme não encontrado")
                 setMovies(data.Search);
+                setError("")
                 setIsLoading(false)
             } catch (err) {
-                console.error(err.message)
-                setError(err.message)
+                if (err.name !== "AbortError") {
+                    console.error(err.message)
+                    setError(err.message)
+                }
             } finally {
                 setIsLoading(false)
             }
@@ -106,7 +111,11 @@ export default function App() {
             setError("")
             return
         }
+        handleCloseId()
         fetchMovies();
+        return function () {
+            controller.abort();
+        }
     }, [query]);
 
 
@@ -223,6 +232,21 @@ function SelectedMovie({selectedId, onCloseId, onAddWatched, watched}) {
         onCloseId()
     }
 
+    useEffect(function () {
+        function callback(e) {
+            if (e.code === 'Escape') {
+                onCloseId()
+            }
+        }
+
+        document.addEventListener('keydown', callback)
+
+        return () => {
+            document.removeEventListener('keydown', callback)
+        }
+    }, [onCloseId])
+
+
     useEffect(() => {
         setLoading(true)
 
@@ -238,6 +262,16 @@ function SelectedMovie({selectedId, onCloseId, onAddWatched, watched}) {
 
     }, [selectedId])
 
+    //Criando um useEffect para mudar o title da pag, de acordo com o filme selecionado, por ser um evento externo, usar useEffect
+    useEffect(() => {
+        if (!title) return;
+        document.title = `Movie | ${title}`
+
+        return () => {
+            //Cleanup function, serve para que quando o useEffect nao esteja sendo utilizado volte ao padrao
+            document.title = `GuiMovies`
+        }
+    }, [title])
 
     return <div className="details">
         {loading ? <Loader/> : <>
@@ -266,8 +300,7 @@ function SelectedMovie({selectedId, onCloseId, onAddWatched, watched}) {
                 <p>Diretor: {director}</p>
             </section>
         </>
-        }
-        {selectedId}</div>
+        }</div>
 }
 
 function WatchedSummary({
