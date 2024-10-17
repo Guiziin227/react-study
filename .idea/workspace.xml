@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8ca21be-44c3-4fc3-91fd-e07009f984bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mUP93oVdc8mqxji0AoVSohvgQe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC-Gamer/Desktop/Programacao/udemy/Next/4-Letterboxdv2/letter-boxd/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\PC-Gamer\\AppData\\Roaming\\Code\\User\\Settings.json&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\4-Letterboxdv2\letter-boxd\src" />
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\5-BehindReact\behind\public" />
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\5-BehindReact\behind\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\4-Letterboxdv2\letter-boxd\src\components" />
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\5-BehindReact\behind\src" />
+      <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\5-BehindReact\behind" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8ca21be-44c3-4fc3-91fd-e07009f984bd" name="Changes" comment="" />
+      <created>1727128027258</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727128027258</updated>
+      <workItem from="1727128028919" duration="161000" />
+      <workItem from="1727128197486" duration="150000" />
+      <workItem from="1727128356974" duration="564000" />
+      <workItem from="1727128938661" duration="2207000" />
+      <workItem from="1727196542979" duration="2019000" />
+      <workItem from="1727215920667" duration="4100000" />
+      <workItem from="1727220074915" duration="2188000" />
+      <workItem from="1727292764985" duration="1874000" />
+      <workItem from="1727294670235" duration="3080000" />
+      <workItem from="1727357343051" duration="2174000" />
+      <workItem from="1727878948915" duration="196000" />
+      <workItem from="1728061567677" duration="1000" />
+      <workItem from="1728141750188" duration="1935000" />
+      <workItem from="1728153142858" duration="34000" />
+      <workItem from="1728314813024" duration="866000" />
+      <workItem from="1728323751622" duration="2262000" />
+      <workItem from="1728339922873" duration="3187000" />
+      <workItem from="1728343182503" duration="16000" />
+      <workItem from="1728405226640" duration="2625000" />
+      <workItem from="1728925635308" duration="2646000" />
+      <workItem from="1728940196898" duration="3982000" />
+      <workItem from="1729022123684" duration="3651000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adicionando PropTypes e Reusabilidade">
+      <option name="closed" value="true" />
+      <created>1727295690184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727295690184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionando PropTypes e Reusabilidade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando PropTypes e Reusabilidade" />
+  </component>
+</project>
