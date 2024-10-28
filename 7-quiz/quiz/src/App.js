@@ -1,9 +1,12 @@
 import Header from "./Header";
 import Main from "./Main";
 import {useEffect, useReducer} from "react";
+import Loader from "./Loader";
+import Error from "./Error";
+import Start from "./Start";
 
 const initialState = {
-    quetions: [],
+    questions: [],
     //loading, error, ready, active, finished
     status: "loading",
 }
@@ -11,7 +14,7 @@ const initialState = {
 function reducer(state, action) {
     switch (action.type) {
         case "dataReceived":
-            return {...state, quetions: action.payload, status: "ready"};
+            return {...state, questions: action.payload, status: "ready"};
         case "dataFailed":
             return {...state, status: "error"};
         default:
@@ -22,6 +25,9 @@ function reducer(state, action) {
 export default function App() {
 
     const [state, dispatch] = useReducer(reducer, initialState)
+    const {status, questions} = state
+
+    const numQuestions = questions.length
 
     useEffect(() => {
         async function fetchData() {
@@ -41,6 +47,10 @@ export default function App() {
 
     return <div className="app">
         <Header/>
-        <Main/>
+        <Main>
+            {status === "loading" && <Loader/>}
+            {status === "error" && <Error/>}
+            {status === "ready" && <Start numQuestions={numQuestions}/>}
+        </Main>
     </div>
 }
