@@ -5,6 +5,7 @@ import Loader from "./components/Loader";
 import Error from "./components/Error";
 import Question from "./components/Question";
 import Start from "./components/Start";
+import NextQuestion from "./components/NextQuestion";
 
 const initialState = {
     questions: [],
@@ -33,6 +34,9 @@ function reducer(state, action) {
                     state.points + Number(question.points) :
                     state.points,
             };
+
+        case "nextQuestion":
+            return {...state, index: state.index + 1, answer: null};
         default:
             return state;
     }
@@ -67,11 +71,16 @@ export default function App() {
                 {status === "loading" && <Loader/>}
                 {status === "error" && <Error/>}
                 {status === "ready" && <Start numQuestions={numQuestions} dispatch={dispatch}/>}
-                {status === "active" && <Question
-                    question={questions[index]}
-                    dispatch={dispatch}
-                    answer={answer}
-                />}
+                {status === "active" && (
+                    <>
+                        <Question
+                            question={questions[index]}
+                            dispatch={dispatch}
+                            answer={answer}
+                        />
+                        <NextQuestion dispatch={dispatch} answer={answer}/>
+                    </>
+                )}
             </Main>
         </div>
     );
