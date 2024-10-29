@@ -12,6 +12,7 @@ const initialState = {
 
     index: 0,
     answer: null,
+    points: 0,
 };
 
 function reducer(state, action) {
@@ -23,7 +24,15 @@ function reducer(state, action) {
         case "dataActived":
             return {...state, status: "active"};
         case "newAnswer":
-            return {...state, answer: action.payload};
+            const question = state.questions.at(state.index);
+
+            return {
+                ...state,
+                answer: action.payload,
+                points: action.payload === question.correctOption ?
+                    state.points + Number(question.points) :
+                    state.points,
+            };
         default:
             return state;
     }
