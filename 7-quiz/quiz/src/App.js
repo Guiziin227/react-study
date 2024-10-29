@@ -7,6 +7,8 @@ import Question from "./components/Question";
 import Start from "./components/Start";
 import NextQuestion from "./components/NextQuestion";
 import ProgressBar from "./components/ProgressBar";
+import FinishScreen from "./components/FinishScreen";
+import Restart from "./components/Restart";
 
 const initialState = {
     questions: [],
@@ -15,6 +17,7 @@ const initialState = {
     index: 0,
     answer: null,
     points: 0,
+    highscore: 0,
 };
 
 function reducer(state, action) {
@@ -38,6 +41,14 @@ function reducer(state, action) {
 
         case "nextQuestion":
             return {...state, index: state.index + 1, answer: null};
+        case "finishQuiz":
+            return {
+                ...state,
+                status: "finished",
+                highscore: state.points > state.highscore ? state.points : state.highscore
+            };
+        case "restartQuiz":
+            return {...initialState, questions: state.questions, status: "ready", highscore: state.highscore};
         default:
             return state;
     }
@@ -45,7 +56,7 @@ function reducer(state, action) {
 
 export default function App() {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const {status, questions, index, answer, points} = state;
+    const {status, questions, index, answer, points, highscore} = state;
 
     const numQuestions = questions.length;
     const maxPoints = questions.reduce((prev, cur) => prev + cur.points, 0);
@@ -81,9 +92,13 @@ export default function App() {
                             dispatch={dispatch}
                             answer={answer}
                         />
-                        <NextQuestion dispatch={dispatch} answer={answer}/>
+                        <NextQuestion dispatch={dispatch} answer={answer} numQuestions={numQuestions} index={index}/>
                     </>
                 )}
+                {status === "finished" && (<> <FinishScreen points={points} maxPoints={maxPoints}
+                                                            highscore={highscore}/>
+                    <Restart dispatch={dispatch}/>
+                </>)}
             </Main>
         </div>
     );
