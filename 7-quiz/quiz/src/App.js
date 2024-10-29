@@ -1,15 +1,18 @@
-import Header from "./Header";
-import Main from "./Main";
+import Header from "./components/Header";
+import Main from "./components/Main";
 import {useEffect, useReducer} from "react";
-import Loader from "./Loader";
-import Error from "./Error";
-import Start from "./Start";
+import Loader from "./components/Loader";
+import Error from "./components/Error";
+import Question from "./components/Question";
+import Start from "./components/Start";
 
 const initialState = {
     questions: [],
-    //loading, error, ready, active, finished
-    status: "loading",
-}
+    status: "loading",// loading, error, ready, active, finished
+
+    index: 0,
+    answer: null,
+};
 
 function reducer(state, action) {
     switch (action.type) {
@@ -17,17 +20,21 @@ function reducer(state, action) {
             return {...state, questions: action.payload, status: "ready"};
         case "dataFailed":
             return {...state, status: "error"};
+        case "dataActived":
+            return {...state, status: "active"};
+        case "newAnswer":
+            return {...state, answer: action.payload};
         default:
             return state;
     }
 }
 
 export default function App() {
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const {status, questions, index, answer} = state;
 
-    const [state, dispatch] = useReducer(reducer, initialState)
-    const {status, questions} = state
+    const numQuestions = questions.length;
 
-    const numQuestions = questions.length
 
     useEffect(() => {
         async function fetchData() {
@@ -37,20 +44,26 @@ export default function App() {
                 dispatch({type: "dataReceived", payload: data});
                 console.log(data);
             } catch (error) {
-                dispatch({type: "dataFailed"})
+                dispatch({type: "dataFailed"});
             }
-
         }
 
-        fetchData(); // Chama a função renomeada
+        fetchData();
     }, []);
 
-    return <div className="app">
-        <Header/>
-        <Main>
-            {status === "loading" && <Loader/>}
-            {status === "error" && <Error/>}
-            {status === "ready" && <Start numQuestions={numQuestions}/>}
-        </Main>
-    </div>
+    return (
+        <div className="app">
+            <Header/>
+            <Main>
+                {status === "loading" && <Loader/>}
+                {status === "error" && <Error/>}
+                {status === "ready" && <Start numQuestions={numQuestions} dispatch={dispatch}/>}
+                {status === "active" && <Question
+                    question={questions[index]}
+                    dispatch={dispatch}
+                    answer={answer}
+                />}
+            </Main>
+        </div>
+    );
 }
