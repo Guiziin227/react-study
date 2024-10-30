@@ -9,6 +9,7 @@ import NextQuestion from "./components/NextQuestion";
 import ProgressBar from "./components/ProgressBar";
 import FinishScreen from "./components/FinishScreen";
 import Restart from "./components/Restart";
+import Timer from "./components/Timer";
 
 const initialState = {
     questions: [],
@@ -18,6 +19,7 @@ const initialState = {
     answer: null,
     points: 0,
     highscore: 0,
+    secondsRemaining: null,
 };
 
 function reducer(state, action) {
@@ -27,7 +29,7 @@ function reducer(state, action) {
         case "dataFailed":
             return {...state, status: "error"};
         case "dataActived":
-            return {...state, status: "active"};
+            return {...state, status: "active", secondsRemaining: state.questions.length * 20};
         case "newAnswer":
             const question = state.questions.at(state.index);
 
@@ -49,6 +51,11 @@ function reducer(state, action) {
             };
         case "restartQuiz":
             return {...initialState, questions: state.questions, status: "ready", highscore: state.highscore};
+        case "tick":
+            return {
+                ...state, secondsRemaining: state.secondsRemaining - 1,
+                status: state.secondsRemaining === 0 ? "finished" : state.status
+            };
         default:
             return state;
     }
@@ -56,7 +63,7 @@ function reducer(state, action) {
 
 export default function App() {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const {status, questions, index, answer, points, highscore} = state;
+    const {status, questions, index, answer, points, highscore, secondsRemaining} = state;
 
     const numQuestions = questions.length;
     const maxPoints = questions.reduce((prev, cur) => prev + cur.points, 0);
@@ -92,6 +99,7 @@ export default function App() {
                             dispatch={dispatch}
                             answer={answer}
                         />
+                        <Timer dispatch={dispatch} secondsRemaining={secondsRemaining}/>
                         <NextQuestion dispatch={dispatch} answer={answer} numQuestions={numQuestions} index={index}/>
                     </>
                 )}
