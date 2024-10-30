@@ -18,7 +18,7 @@ const initialState = {
     index: 0,
     answer: null,
     points: 0,
-    highscore: 0,
+    highscore: JSON.parse(Number(localStorage.getItem("highscore"))) || 0,
     secondsRemaining: null,
 };
 
@@ -82,6 +82,11 @@ export default function App() {
 
         fetchData();
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem("highscore", JSON.stringify(highscore));
+    }, [highscore]);
+
 
     return (
         <div className="app">
