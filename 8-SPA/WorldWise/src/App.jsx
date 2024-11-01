@@ -4,6 +4,8 @@ import Product from "./pages/Product.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import AppLayout from "./pages/AppLayout.jsx";
+import Login from "./pages/Login.jsx";
 
 const App = () => {
 
@@ -13,6 +15,8 @@ const App = () => {
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="product" element={<Product/>}/>
                 <Route path="pricing" element={<Pricing/>}/>
+                <Route path="login" element={<Login/>}/>
+                <Route path="main" element={<AppLayout/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
