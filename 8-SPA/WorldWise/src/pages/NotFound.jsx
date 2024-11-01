@@ -1,12 +1,12 @@
 import NavBar from "../components/NavBar.jsx";
 
-const Product = () => {
+const NotFound = () => {
     return (
         <div>
             <NavBar/>
-            <h1>Product</h1>
+            Página não encontrada :(
         </div>
     );
 };
 
-export default Product;
+export default NotFound;

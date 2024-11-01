@@ -1,12 +1,12 @@
 import NavBar from "../components/NavBar.jsx";
 
-const Product = () => {
+const Homepage = () => {
     return (
         <div>
             <NavBar/>
-            <h1>Product</h1>
+            <h1>Worldwise</h1>
         </div>
     );
 };
 
-export default Product;
+export default Homepage;
