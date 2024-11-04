@@ -1,12 +1,5 @@
 import styles from "../../../../../../udemy/ultimate-react-course-main/11-worldwise/starter/components/City.module.css";
 
-const formatDate = (date) =>
-    new Intl.DateTimeFormat("en", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        weekday: "long",
-    }).format(new Date(date));
 
 function City() {
     // TEMP DATA

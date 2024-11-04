@@ -1,5 +1,4 @@
-import styles
-    from "../../../../../../udemy/ultimate-react-course-main/11-worldwise/starter/components/CountryItem.module.css";
+import styles from "./CountryItem.module.css";
 
 function CountryItem({country}) {
     return (
