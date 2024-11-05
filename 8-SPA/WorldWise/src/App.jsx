@@ -9,6 +9,7 @@ import Login from "./pages/Login.jsx";
 import CityList from "./components/CityList.jsx";
 import {useEffect, useState} from "react";
 import CountriesList from "./components/CountriesList.jsx";
+import City from "./components/City.jsx";
 
 const App = () => {
 
@@ -45,6 +46,7 @@ const App = () => {
                 <Route path="app" element={<AppLayout/>}>
                     <Route index element={<CityList cities={cities} isLoading={isLoading}/>}/>
                     <Route path="cities" element={<CityList cities={cities} isLoading={isLoading}/>}/>
+                    <Route path="cities/:cu" element={<City/>}/>
                     <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading}/>}/>
                     <Route path="form" element={<p>Form</p>}/>
                 </Route>
