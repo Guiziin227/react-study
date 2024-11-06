@@ -1,10 +1,10 @@
 import styles from "../../../../../../udemy/ultimate-react-course-main/11-worldwise/starter/components/City.module.css";
-import {useParams} from "react-router-dom";
+import {useParams, useSearchParams} from "react-router-dom";
 
 
 function City() {
-    const {cu} = useParams()
-    console.log(cu)
+    const {id} = useParams()
+    console.log(id)
     // TEMP DATA
     const currentCity = {
         cityName: "Lisbon",
@@ -13,9 +13,15 @@ function City() {
         notes: "My favorite city so far!",
     };
 
+    const [searchParams, setSearchParams] = useSearchParams();
+    const lat = searchParams.get("lat")
+    const lng = searchParams.get("lng")
+
     const {cityName, emoji, date, notes} = currentCity;
 
-    return <h1>City {cu}</h1>
+    return <>
+        <h1>City {id} {lat} {lng}</h1>
+    </>
 
     // return (
     //     <div className={styles.city}>
