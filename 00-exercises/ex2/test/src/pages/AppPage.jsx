@@ -1,47 +1,51 @@
 import React, {useReducer, useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 
-const initialState = {
-    saldo: Number(localStorage.getItem("saldo")) || 0,
+const initialState = { //Criano um estado iniciais e settando para iniciar em 0, caso nao tenha valor salvo
+    saldo: Number(localStorage.getItem("saldo")) || 0, //usando o localStorage pego o item salvo internamente como "saldo" e devolvo no refresh
     emprestimo: Number(localStorage.getItem("emprestimo")) || 0,
 }
 
+//Crio a funcao reducer que trabalha em cada possibilidade dada para o programa
 function reducer(state, action) {
-    switch (action.type) {
+    switch (action.type) {  // O switch deve estar no início
         case "add":
             return {
                 ...state, saldo: state.saldo + action.payload,
-            }
+            };
         case "emprestimo":
             return {
                 ...state, emprestimo: state.emprestimo + action.payload,
-            }
+            };
         case "pagarEmp":
-            return state.saldo >= state.emprestimo
-                ? {
+            if (state.saldo >= state.emprestimo) {
+                return {
                     ...state,
-                    saldo: state.saldo - state.emprestimo,  // Subtrai o valor do saldo
-                    emprestimo: 0,  // Zera o empréstimo após o pagamento
-                }
-                : state;
+                    saldo: state.saldo - state.emprestimo,
+                    emprestimo: 0,
+                };
+            } else {
+                alert("Saldo insuficiente para pagar o empréstimo.");
+                return state;
+            }
         case "out":
             return {
                 ...state, saldo: state.saldo - action.payload,
-            }
+            };
         default:
-            return state;
+            return state;  // O default sempre deve ser a última linha dentro do switch
     }
 }
 
 const AppPage = () => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const {saldo, emprestimo} = state;
-    const navigate = useNavigate();
+    const [state, dispatch] = useReducer(reducer, initialState); //inicializo o useReducer
+    const {saldo, emprestimo} = state; // desestruturo
+    const navigate = useNavigate(); // inicializo o useNavigate
 
     useEffect(() => {
         localStorage.setItem("saldo", saldo);
         localStorage.setItem("emprestimo", emprestimo);
-    }, [saldo, emprestimo]);
+    }, [saldo, emprestimo]); //Faço o useEffect atualizar a cada mudanca de um dos valores, e armazenar no local storage
 
     return (
         <>
@@ -51,7 +55,8 @@ const AppPage = () => {
             <p>Empréstimo: {emprestimo}</p>
 
             <p>
-                <button onClick={() => dispatch({type: "add", payload: 300})}>
+                <button
+                    onClick={() => dispatch({type: "add", payload: 300})}>   {/*Passo as informaçoes para o dispatch*/}
                     Adicionar 300
                 </button>
             </p>
@@ -84,6 +89,9 @@ const AppPage = () => {
                 }}>
                     Fechar conta
                 </button>
+                {/* Crio um botao que na condicao de quando o if esta true ira navegar para a pagina inicial, usando o useNavigate para deste modo nao dar refresh
+            na pagina de atualizar de maneira sutil
+            */}
             </p>
         </>
     );
