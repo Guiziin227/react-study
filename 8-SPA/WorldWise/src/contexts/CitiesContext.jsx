@@ -1,4 +1,4 @@
-import {createContext, useEffect, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 
 const CitiesContext = createContext()
 
@@ -33,7 +33,8 @@ function CitiesProvider({children}) {
 }
 
 function useCities() {
-
+    const context = useContext(CitiesContext);
+    return context
 }
 
-export {CitiesProvider};
+export {CitiesProvider, useCities};
