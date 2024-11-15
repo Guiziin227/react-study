@@ -2,9 +2,11 @@ import Spinner from "./Spinner.jsx";
 import style from "./CountryList.module.css"
 import Message from "./Message.jsx";
 import CountryItem from "./CountryItem.jsx";
-import city from "./City.jsx";
 
-const CountriesList = ({cities, isLoading}) => {
+import {useCities} from "../contexts/CitiesContext.jsx";
+
+const CountriesList = () => {
+    const {cities, isLoading} = useCities()
     if (isLoading) return <Spinner/>
     if (!cities.length) return <Message message="Adicione uma cidade"/>
 
