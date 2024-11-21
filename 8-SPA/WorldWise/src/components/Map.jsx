@@ -3,25 +3,33 @@ import {useNavigate, useSearchParams} from "react-router-dom";
 import {MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents} from "react-leaflet";
 import {useEffect, useState} from "react";
 import {useCities} from "../contexts/CitiesContext.jsx";
+import {useGeolocation} from "../hooks/useGeolocation.js";
+import Button from "./Button.jsx";
 
 
 const Map = () => {
-
     const [mapPosition, setMapPosition] = useState([40, 0]);
-
     const {cities} = useCities();
-
     const [searchParams] = useSearchParams();
+    const {isLoading: isLoadingPosition, position: geolocationPosition, getPosition} = useGeolocation()
     const mapLat = searchParams.get("lat")
     const mapLng = searchParams.get("lng")
+
 
     //Aqui usamos o useEffect para "salvar o ultimo estado"
     useEffect(() => {
         if (mapLat && mapLng) setMapPosition([mapLat, mapLng])
     }, [mapLat, mapLng]);
 
+    useEffect(() => {
+        if (geolocationPosition) setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    }, [geolocationPosition]);
+
     return (
         <div className={style.mapContainer}>
+            {!geolocationPosition && (<Button type="position" onClick={getPosition}>
+                {isLoadingPosition ? "Loading..." : "Use your position"}
+            </Button>)}
             <MapContainer center={mapPosition} zoom={6} scrollWhellZoom={true} className={style.map}>
 
                 <TileLayer
