@@ -3,7 +3,6 @@
     {
       "cityName": "Lisbon",
       "country": "Portugal",
-      "emoji": "🇵🇹",
       "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
@@ -15,7 +14,6 @@
     {
       "cityName": "Madrid",
       "country": "Spain",
-      "emoji": "🇪🇸",
       "date": "2027-07-15T08:22:53.976Z",
       "notes": "",
       "position": {
@@ -27,7 +25,6 @@
     {
       "cityName": "Berlin",
       "country": "Germany",
-      "emoji": "🇩🇪",
       "date": "2027-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
@@ -35,6 +32,17 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Palma",
+      "country": "Spain",
+      "date": "2024-11-22T19:35:11.820Z",
+      "notes": "Uhul show!",
+      "position": {
+        "lat": "39.56892953931075",
+        "lng": "2.6636298105155203"
+      },
+      "id": "de79184a-080c-47d9-810d-1f274c3462e2"
     }
   ]
 }
