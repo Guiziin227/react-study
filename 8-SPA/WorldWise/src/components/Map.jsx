@@ -5,16 +5,15 @@ import {useEffect, useState} from "react";
 import {useCities} from "../contexts/CitiesContext.jsx";
 import {useGeolocation} from "../hooks/useGeolocation.js";
 import Button from "./Button.jsx";
+import {useUrlPosition} from "../hooks/useUrlPosition.js";
 
 
 const Map = () => {
     const [mapPosition, setMapPosition] = useState([40, 0]);
     const {cities} = useCities();
-    const [searchParams] = useSearchParams();
     const {isLoading: isLoadingPosition, position: geolocationPosition, getPosition} = useGeolocation()
-    const mapLat = searchParams.get("lat")
-    const mapLng = searchParams.get("lng")
 
+    const [mapLat, mapLng] = useUrlPosition()
 
     //Aqui usamos o useEffect para "salvar o ultimo estado"
     useEffect(() => {
@@ -23,6 +22,7 @@ const Map = () => {
 
     useEffect(() => {
         if (geolocationPosition) setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+
     }, [geolocationPosition]);
 
     return (
@@ -61,7 +61,7 @@ function DetectClick() {
 
     useMapEvents({
         click: (e) => {
-            navigate(`form?=${e.latlng.lat}&lng=${e.latlng.lng}`)
+            navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
         }
     })
 }
