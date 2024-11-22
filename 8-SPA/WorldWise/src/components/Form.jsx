@@ -23,7 +23,7 @@ function Form() {
     const [date, setDate] = useState(new Date());
     const [notes, setNotes] = useState("");
     const [geocodingError, setGeocodingError] = useState("");
-    const {createCity} = useCities()
+    const {createCity, isLoading} = useCities()
 
     const navigate = useNavigate();
 
@@ -60,18 +60,19 @@ function Form() {
     if (isLoadingGeocoding) return <Spinner/>
     if (geocodingError) return <Message message={geocodingError}/>;
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         if (!cityName || !date) return;
 
         const newCity = {cityName, country, date, notes, position: {lat, lng}, id: crypto.randomUUID()};
-        console.log(newCity)
-        createCity(newCity)
+
+        await createCity(newCity)
+        navigate("/app/cities")
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={`${styles.form} ${isLoading ? styles.loading : ""}`} onSubmit={handleSubmit}>
             <div className={styles.row}>
                 <label htmlFor="cityName">City name</label>
                 <input

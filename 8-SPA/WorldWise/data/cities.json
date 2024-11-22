@@ -43,6 +43,72 @@
         "lng": "2.6636298105155203"
       },
       "id": "de79184a-080c-47d9-810d-1f274c3462e2"
+    },
+    {
+      "cityName": "Budapest",
+      "country": "Hungary",
+      "date": "2024-11-22T19:39:56.290Z",
+      "notes": "Lindo",
+      "position": {
+        "lat": "47.49853611649258",
+        "lng": "19.032077794006383"
+      },
+      "id": "6a31e0d2-3ecc-448b-a0a1-0daebef45e1c"
+    },
+    {
+      "cityName": "Voronezh",
+      "country": "Russian Federation (the)",
+      "date": "2024-11-22T19:40:23.581Z",
+      "notes": "Cool",
+      "position": {
+        "lat": "51.60245262073008",
+        "lng": "39.157098499945974"
+      },
+      "id": "713780da-0c42-4890-b55f-dce300e4dad6"
+    },
+    {
+      "cityName": "Debrecen",
+      "country": "Hungary",
+      "date": "2024-11-22T19:43:56.618Z",
+      "notes": "Show",
+      "position": {
+        "lat": "47.49997571064319",
+        "lng": "21.605634061694403"
+      },
+      "id": "3caed67c-6a79-49b8-8151-5251a9395795"
+    },
+    {
+      "cityName": "Giroc",
+      "country": "Romania",
+      "date": "2024-11-22T19:44:12.347Z",
+      "notes": "ss",
+      "position": {
+        "lat": "45.687979892980735",
+        "lng": "21.209195825202354"
+      },
+      "id": "42e13f94-e16f-40a0-b974-b351dcd8554c"
+    },
+    {
+      "cityName": "Fada",
+      "country": "Chad",
+      "date": "2024-11-22T19:46:53.409Z",
+      "notes": "lindo",
+      "position": {
+        "lat": "19.776865860221978",
+        "lng": "21.302740229408837"
+      },
+      "id": "4b86176b-867c-4ba0-ba51-e0431e2a71a5"
+    },
+    {
+      "cityName": "Boali",
+      "country": "Central African Republic (the)",
+      "date": "2024-11-22T19:47:46.531Z",
+      "notes": "ss",
+      "position": {
+        "lat": "4.703111143800153",
+        "lng": "17.953735381640893"
+      },
+      "id": "ff0be27a-48ad-491a-91c2-f04adfddf85b"
     }
   ]
 }
