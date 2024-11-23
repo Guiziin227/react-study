@@ -1,15 +1,26 @@
 {
   "cities": [
     {
-      "cityName": "Leganes",
+      "cityName": "Lles de Cerdanya",
       "country": "Spain",
-      "date": "2024-11-23T19:09:10.551Z",
+      "date": "2024-11-23T19:14:37.125Z",
+      "notes": "hggg",
+      "position": {
+        "lat": "42.42345651793833",
+        "lng": "1.621501745871359"
+      },
+      "id": "0dc7a4c2-a7e2-4217-858a-582ddee0243f"
+    },
+    {
+      "cityName": "Santa Maria",
+      "country": "Brazil",
+      "date": "2024-11-23T19:14:43.770Z",
       "notes": "",
       "position": {
-        "lat": "40.34654412118006",
-        "lng": "-3.7323664757312707"
+        "lat": "-29.64986867797229",
+        "lng": "-53.85861348819108"
       },
-      "id": "0f534561-d439-44ad-82aa-9bc44587a95d"
+      "id": "91da444b-f555-4da5-a95f-9f3a9b2d7123"
     }
   ]
 }
