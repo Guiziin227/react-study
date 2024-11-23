@@ -1,15 +1,3 @@
 {
-  "cities": [
-    {
-      "cityName": "Zaragoza",
-      "country": "Spain",
-      "date": "2024-11-22T19:59:50.628Z",
-      "notes": "Amei conhecer\n",
-      "position": {
-        "lat": "41.605342829147716",
-        "lng": "-0.8766875466343295"
-      },
-      "id": "f18580b9-9d07-4b84-aa1b-111ff89e64eb"
-    }
-  ]
+  "cities": []
 }
