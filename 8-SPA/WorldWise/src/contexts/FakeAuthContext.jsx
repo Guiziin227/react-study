@@ -15,8 +15,12 @@ function reducer(state, action) {
                 user: action.payload,
                 isAuthenticated: true,
             }
-        case "logout":{
-            ...initialState,
+        case "logout":
+            return {
+                ...initialState,
+            }
+        default: {
+            throw new Error("Unable to log in")
         }
     }
 }
@@ -35,15 +39,16 @@ function AuthProvider({children}) {
 
     function login(email, password) {
         if (email === FAKE_USER.email && password === FAKE_USER.password)
-            dispatch({type: "login", dispatch: FAKE_USER.name})
+            dispatch({type: "login", payload: FAKE_USER})
+        console.log(user)
     }
 
     function logout() {
-        dispatch({type:"logout"})
+        dispatch({type: "logout"})
     }
 
     return <AuthContext.Provider value={{
-        logout,login,user,isAuthenticated
+        logout, login, user, isAuthenticated
     }}>{children}</AuthContext.Provider>
 }
 

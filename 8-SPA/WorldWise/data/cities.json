@@ -1,3 +1,15 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Leganes",
+      "country": "Spain",
+      "date": "2024-11-23T19:09:10.551Z",
+      "notes": "",
+      "position": {
+        "lat": "40.34654412118006",
+        "lng": "-3.7323664757312707"
+      },
+      "id": "0f534561-d439-44ad-82aa-9bc44587a95d"
+    }
+  ]
 }
