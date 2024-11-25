@@ -1,9 +1,4 @@
-import {useQuiz} from "../contexts/QuizContext";
-
-const Start = () => {
-    
-    const {numQuestions, dispatch} = useQuiz()
-
+const Start = ({numQuestions, dispatch}) => {
     return (
         <div className="start">
             <h2>Bem vindo ao Quiz</h2>

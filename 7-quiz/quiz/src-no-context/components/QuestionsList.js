@@ -1,8 +1,4 @@
-import {useQuiz} from "../contexts/QuizContext";
-
-const QuestionsList = ({question}) => {
-
-    const {answer, dispatch} = useQuiz()
+const QuestionsList = ({question, dispatch, answer}) => {
 
     const hasAnswer = answer !== null
 

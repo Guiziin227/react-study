@@ -1,7 +1,4 @@
-import {useQuiz} from "../contexts/QuizContext";
-
-const Restart = () => {
-    const {dispatch} = useQuiz()
+const Restart = ({dispatch}) => {
     return (
         <button className="btn btn-toggle" onClick={() => dispatch({type: 'restartQuiz'})}>
             Restart
