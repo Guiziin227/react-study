@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ca21be-44c3-4fc3-91fd-e07009f984bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/4-Letterboxdv2/letter-boxd/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9-Atomic/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/9-Atomic/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9-Atomic/src/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/9-Atomic/src/Test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +21,21 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Guiziin227&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Guiziin227/react-study.git&quot;,
+    &quot;accountId&quot;: &quot;9923b768-0112-4b23-9e05-65c413f0ab5f&quot;
+  }
+}</component>
   <component name="JsBowerSettings">
     <bower-package value="" />
     <bower.json value="" />
@@ -45,25 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC-Gamer/Desktop/Programacao/udemy/Next/4-Letterboxdv2/letter-boxd/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\PC-Gamer\\AppData\\Roaming\\Code\\User\\Settings.json&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/PC-Gamer/Desktop/Programacao/udemy/Next/4-Letterboxdv2/letter-boxd/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\PC-Gamer\\AppData\\Roaming\\Code\\User\\Settings.json",
+    "settings.editor.selected.configurable": "terminal",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\4-Letterboxdv2\letter-boxd\src" />
@@ -76,10 +84,27 @@
       <recent name="C:\Users\PC-Gamer\Desktop\Programacao\udemy\Next\5-BehindReact\behind" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
+      <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/../../../../msys64/usr/bin/bash.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -113,6 +138,8 @@
       <workItem from="1728925635308" duration="2646000" />
       <workItem from="1728940196898" duration="3982000" />
       <workItem from="1729022123684" duration="3651000" />
+      <workItem from="1734127948159" duration="40000" />
+      <workItem from="1734138635065" duration="746000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionando PropTypes e Reusabilidade">
       <option name="closed" value="true" />
