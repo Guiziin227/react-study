@@ -3,6 +3,7 @@ import "../index.css"
 import StarRating from "../StarRating";
 import {useMovies} from "./useMovies";
 import {useLocalStorage} from "./useLocalStorage";
+import {useKey} from "./useKey";
 
 
 const average = (arr) =>
@@ -156,19 +157,7 @@ function SelectedMovie({selectedId, onCloseId, onAddWatched, watched}) {
         onCloseId()
     }
 
-    useEffect(function () {
-        function callback(e) {
-            if (e.code === 'Escape') {
-                onCloseId()
-            }
-        }
-
-        document.addEventListener('keydown', callback)
-
-        return () => {
-            document.removeEventListener('keydown', callback)
-        }
-    }, [onCloseId])
+    useKey("escape", onCloseId)
 
 
     useEffect(() => {
@@ -309,30 +298,12 @@ function NumResults({movies}) {
 function Search({query, setQuery}) {
     const inputEl = useRef(null);
 
-    useEffect(() => {
+    useKey("Enter", function () {
+        if (document.activeElement === inputEl.current) return
+        inputEl.current.focus();
+        setQuery("");
+    })
 
-        function callback(e) {
-            if (document.activeElement === inputEl.current) return
-
-            if (e.code === "Enter") {
-                inputEl.current.focus();
-                setQuery("");
-            }
-        }
-
-        document.addEventListener("keydown", callback);
-
-        return () => {
-            document.removeEventListener("keydown", callback);
-        }
-
-    }, [setQuery])
-
-    // useEffect(() => {
-    //     const el = document.querySelector('.search');
-    //     console.log(el)
-    //     el.focus()
-    // }, []);
 
     return <input
         className="search"
