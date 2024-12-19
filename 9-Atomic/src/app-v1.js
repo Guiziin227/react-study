@@ -44,10 +44,11 @@ function App() {
         [isFakeDark]
     );
 
-    const archiveOptions = {
+    const archiveOptions = useMemo( () => {
+        return {
         show: false,
-        title: "Archive tips and tricks"
-    }
+        title: "Archive tips and tricks",
+    }}, [])
 
     return (
         //Provider value para os childs components
