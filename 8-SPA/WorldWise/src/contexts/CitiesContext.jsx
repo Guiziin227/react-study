@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useReducer, useState} from "react";
+import {createContext, useCallback, useContext, useEffect, useReducer} from "react";
 
 const CitiesContext = createContext()
 
@@ -57,6 +57,7 @@ function reducer(state, action) {
 
 const BASE_URL = "http://localhost:8000"
 
+// eslint-disable-next-line react/prop-types
 function CitiesProvider({children}) {
     const [{cities, isLoading, currentCity, error}, dispatch] = useReducer(reducer, initialState);
 
@@ -76,18 +77,18 @@ function CitiesProvider({children}) {
         }
         , []);
 
-    async function getCity(id) {
-        if (id === currentCity.id) return
-        dispatch({type: "loading"})
-        try {
-            const res = await fetch(`${BASE_URL}/cities/${id}`);
-            const data = await res.json();
-            console.log(data)
-            dispatch({type: "city/loaded", payload: data})
-        } catch {
-            dispatch({type: "rejected", payload: "Error fetching city"})
-        }
-    }
+   const getCity = useCallback( async function getCity(id) {
+       if (id === currentCity.id) return
+       dispatch({type: "loading"})
+       try {
+           const res = await fetch(`${BASE_URL}/cities/${id}`);
+           const data = await res.json();
+           console.log(data)
+           dispatch({type: "city/loaded", payload: data})
+       } catch {
+           dispatch({type: "rejected", payload: "Error fetching city"})
+       }
+   },[currentCity.id])
 
     async function createCity(newCity) {
         dispatch({type: "loading"})

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e2f0f02-0da5-4bfb-bc0d-31f9b82702ee" name="Changes" comment="feat: change to app.js">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-Atomic/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/9-Atomic/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-Atomic/src/PostContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/9-Atomic/src/PostContext.js" afterDir="false" />
+    <list default="true" id="1e2f0f02-0da5-4bfb-bc0d-31f9b82702ee" name="Changes" comment="feat: optimization with callback and memo">
+      <change beforePath="$PROJECT_DIR$/8-SPA/WorldWise/data/cities.json" beforeDir="false" afterPath="$PROJECT_DIR$/8-SPA/WorldWise/data/cities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8-SPA/WorldWise/src/contexts/CitiesContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/8-SPA/WorldWise/src/contexts/CitiesContext.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1734634394136" duration="48000" />
       <workItem from="1734636466340" duration="272000" />
       <workItem from="1734703776686" duration="2676000" />
-      <workItem from="1734713779533" duration="623000" />
+      <workItem from="1734713779533" duration="1405000" />
     </task>
     <task id="LOCAL-00005" summary="feat: fix error">
       <option name="closed" value="true" />
@@ -141,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734704346717</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: optimization with callback and memo">
+      <option name="closed" value="true" />
+      <created>1734715650445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734715650445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +162,7 @@
     <MESSAGE value="feat: refactoring useMemo" />
     <MESSAGE value="feat: add useCallback to reduce render time" />
     <MESSAGE value="feat: change to app.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: change to app.js" />
+    <MESSAGE value="feat: optimization with callback and memo" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: optimization with callback and memo" />
   </component>
 </project>
